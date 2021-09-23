@@ -1,0 +1,37 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px dotted rgb(134, 133, 133);
+  margin-top: 15px;
+}
+.tooltip-text {
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip-right {
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip-left {
+  top: -5px;
+  right: 105%;
+}
+
+.tooltip-top {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip-bottom {
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}

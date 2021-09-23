@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import '../stylesheets/tooltip.css';
 class Tooltip extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      active: true,
+      active: false,
     };
   }
   handleMouseEnter = (val) => {
@@ -27,9 +28,11 @@ class Tooltip extends Component {
           onMouseEnter={() => this.handleMouseEnter(true)}
           onMouseLeave={() => this.handleMouseLeave(false)}
         >
+          {' '}
+          Hi, i am a {direction} Tooltip !
           {active && (
             <span className={`tooltip-text tooltip-${direction}`}>
-              Hi, i am a {direction} Tooltip !
+              Thanks for hovering. I'm a tooltip
             </span>
           )}
         </div>
