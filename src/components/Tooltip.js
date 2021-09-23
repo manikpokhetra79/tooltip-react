@@ -5,22 +5,22 @@ class Tooltip extends Component {
     super(props);
 
     this.state = {
-      active: false,
+      isHovered: false,
     };
   }
   handleMouseEnter = (val) => {
     this.setState({
-      active: val,
+      isHovered: val,
     });
   };
   handleMouseLeave = (val) => {
     this.setState({
-      active: val,
+      isHovered: val,
     });
   };
   render() {
-    const { direction } = this.props;
-    const { active } = this.state;
+    const { position } = this.props;
+    const { isHovered } = this.state;
     return (
       <>
         <div
@@ -28,13 +28,13 @@ class Tooltip extends Component {
           onMouseEnter={() => this.handleMouseEnter(true)}
           onMouseLeave={() => this.handleMouseLeave(false)}
         >
-          {' '}
-          Hi, i am a {direction} Tooltip !
-          {active && (
-            <span className={`tooltip-text tooltip-${direction}`}>
-              Thanks for hovering. I'm a tooltip
-            </span>
-          )}
+          Hi, i am a {position} Tooltip !
+          <span
+            style={{ visibility: isHovered ? 'visible' : 'hidden' }}
+            className={`tooltip-text tooltip-${position}`}
+          >
+            Thanks for hovering! I'm a tooltip
+          </span>
         </div>
       </>
     );

@@ -6,19 +6,21 @@ export default class App extends Component {
     return (
       <>
         <h1 className="page-headers">
-          Hello Folks, this is a React tooltip Component
+          <i className="fas fa-angle-left" style={{ color: 'red' }}></i> Hey
+          Folks ! This is a simple react tooltip Component{' /'}
+          <i className="fas fa-angle-right" style={{ color: 'red' }}></i>
         </h1>
         <div class="tooltip-wrapper">
-          <Tooltip direction="left" />
+          <Tooltip position="left" />
         </div>
         <div class="tooltip-wrapper">
-          <Tooltip direction="right" />
+          <Tooltip position="right" />
         </div>
         <div class="tooltip-wrapper">
-          <Tooltip direction="bottom" />
+          <Tooltip position="top" />
         </div>
         <div class="tooltip-wrapper">
-          <Tooltip direction="top" />
+          <Tooltip position="bottom" />
         </div>
       </>
     );
